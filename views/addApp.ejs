@@ -1,0 +1,33 @@
+<%- include('header'); -%> <%- include('nav'); -%>
+
+<div class="add-app-form">
+  <form action="/addApp" method="POST">
+    <div class="left">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required/>
+
+      <label for="appname">Appname</label>
+      <input type="text" id="appname" name="appname" required/>
+
+      <label for="url">Url</label>
+      <input type="text" id="url" name="url" required/>
+    </div>
+
+    <div class="right">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required/>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required/>
+
+      <label for="conformPassword">Conform Password</label>
+      <input type="password" id="conformPassword" name="conformPassword" required/>
+    </div>
+    <div class="form-btns-div">
+      <button type="submit" class="add-btn btn-1">Add</button> 
+    </div>
+  </form>
+  <a href="/"><button class="add-btn">Cancle</button></a> 
+</div>
+
+<%- include('footer'); -%>

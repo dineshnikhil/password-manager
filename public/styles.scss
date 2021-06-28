@@ -1,0 +1,464 @@
+$bg_color: #0b090a;
+$secondary: #d3d3d3;
+$red: #ba181b;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: $bg_color;
+
+    /* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+}
+
+.logo-div {
+    width: 50%;
+    margin: 3% auto;
+    position: relative;
+    text-align: center;
+
+    color: white;
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.login-div {
+    width: 25%;
+    margin: 4% auto;
+    color: $secondary;
+
+    a {
+        text-decoration: none;
+    }
+    hr {
+        color: white;
+    }
+    p{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        color: white;
+        margin-bottom: 7%;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 1% 3%;
+    }
+
+    input[type="text"]:focus {
+        box-shadow: none;
+    }
+
+    input[type="password"] {
+        width: 100%;
+        color: white;
+        margin-bottom: 7%;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 1% 3%;
+    }
+
+    input[type="password"]:focus {
+        box-shadow: none;
+    }
+
+    .login-btn {
+        display: block;
+        width: 100%;
+
+        padding: 2.7%;
+        margin: 3% 0;
+        font-size: 1.2rem;
+        background-color: $red;
+        border: none;
+        border-radius: 12px;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #a4161a;
+            color: $bg_color;
+        }
+    }
+}
+
+.navbar {
+    background-color: white !important;
+    padding: 1% 4% !important;
+
+    .navbar-brand {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-right: 1%;
+    }
+
+    .nav-link {
+        font-size: 1.6rem;
+        color: #afafaf !important;
+        font-weight: normal;
+    }
+
+    .brand {
+        border-right: 2px solid black;
+    }
+    .user{
+        color: #6411ad;
+    }
+}
+
+.header-div{
+    width: 70%;
+    margin: 2.5% auto;
+
+    position: relative;
+
+    .search-form {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        border-bottom: 3px solid $secondary;
+
+        input[type="search"] {
+            width: 85%;
+            color: white;
+            font-size: 1.3rem;
+            background: transparent;
+            border: none;
+            // border-bottom: 3px solid $secondary;
+            // border-radius: 0;
+            padding: 1% 3%;
+        }
+    
+        input[type="search"]:focus {
+            box-shadow: none;
+        }
+
+        button {
+            background-color: transparent;
+            color: $secondary;
+            border: none;
+            .fa-search {
+                font-size: 1.5rem;
+                font-weight: lighter;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+
+    .add-btn {
+        display: block;
+        width: 20%;
+
+        padding: 0.8%;
+        font-size: 1.2rem;
+        background-color: $red;
+        border: none;
+        border-radius: 12px;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #a4161a;
+            color: $bg_color;
+        }
+    }
+}
+
+.appsData-div {
+    width: 90%;
+    float: left;
+    margin-left: 5%;
+    height: 68vh;
+    overflow: auto;
+
+    .app-card {
+        width: 45%;
+        background-color: white;
+        // padding: 2%;
+        border-radius: 12px;
+        float: left;
+        margin: 2%;
+
+        .card-heading-div {
+            position: relative;
+            margin-bottom: 3%;
+            background-color: $red;
+            padding: 2%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            color: white;
+            
+            p {
+                position: absolute;
+                top: 18px;
+                right: 5px;
+                color: rgba(0, 0, 0, 0.568);
+
+                .fa-clock {
+                    color: $bg_color;
+                }
+            }
+        }
+
+        .card-info-div {
+            padding: 2%;
+        }
+
+        p {
+            margin: 0.7%;
+            font-size: 1.2rem;
+
+            span {
+                color: rgba(0, 0, 0, 0.568);
+            }
+        }
+
+        label {
+            display: block;
+            margin: 0.7%;
+            font-size: 1.2rem;
+
+            span {
+                color: rgba(0, 0, 0, 0.568);
+            }
+        }
+
+        input {
+            margin-top: 1%;
+        }
+
+        button {
+            // display: block;
+            // width: 20%;
+    
+            padding: 1% 4%;
+            font-size: 1rem;
+            background-color: $red;
+            border: none;
+            border-radius: 12px;
+    
+            transition: 0.3s ease-in-out;
+    
+            &:hover {
+                background-color: #a4161a;
+                color: $bg_color;
+            } 
+        }
+    }
+}
+
+.add-app-form {
+    color: $secondary;
+    width: 70%;
+    margin: 5% auto;
+    label {
+        display: block;
+        margin-top: 5%;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        margin: 0.5%;
+        color: white;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 0.3% 3%;
+    }
+
+    input[type="text"]:focus {
+        box-shadow: none;
+    }
+
+    input[type="password"] {
+        width: 80%;
+        margin: 0.5%;
+        color: white;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 0.3% 3%;
+    }
+
+    input[type="password"]:focus {
+        box-shadow: none;
+    }
+
+    input[type="email"] {
+        width: 80%;
+        margin: 0.5%;
+        color: white;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 0.3% 3%;
+    }
+
+    input[type="email"]:focus {
+        box-shadow: none;
+    }
+
+    .right {
+       float: right;
+       width: 50%;
+    }
+    .left {
+        float: left;
+        width: 50%;
+    }
+
+    .add-btn {
+        width: 30%;
+
+        margin: 5% 7% 0 0;
+
+        padding: 0.8%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: $red;
+        border: none;
+        border-radius: 12px;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #a4161a;
+            color: $bg_color;
+        }
+    }
+
+    .form-btns-div {
+        width: 80%;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+}
+
+.signup-div {
+    margin: 7% auto 0 auto;
+    width: 25%;
+
+    h1 {
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 12%;
+    }
+
+    .fa-user-circle {
+        color: white;
+        font-size: 7rem;
+        margin: 0 auto;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        margin: 0.5%;
+        margin-bottom: 4%;
+        color: white;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 0.3% 3%;
+    }
+
+    input[type="email"]:focus {
+        box-shadow: none;
+    }
+
+    input[type="password"] {
+        width: 100%;
+        margin: 0.5%;
+        margin-bottom: 4%;
+        color: white;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 0.3% 3%;
+    }
+
+    input[type="password"]:focus {
+        box-shadow: none;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin: 0.5%;
+        margin-bottom: 4%;
+        color: white;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 3px solid $secondary;
+        border-radius: 12px;
+        padding: 0.3% 3%;
+    }
+
+    input[type="text"]:focus {
+        box-shadow: none;
+    }
+
+    #signup-btn {
+        display: block;
+        width: 100%;
+
+        padding: 2.7%;
+        margin: 3% 0;
+        font-size: 1.2rem;
+        background-color: $red;
+        border: none;
+        border-radius: 12px;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #a4161a;
+            color: $bg_color;
+        }
+    }
+
+}

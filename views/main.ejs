@@ -1,0 +1,37 @@
+<%- include('header'); -%> <%- include('nav'); -%>
+
+<div class="header-div">
+  <a href="/addApp"><button class="add-btn">Add App</button></a>
+  <form class="search-form">
+    <input type="search" placeholder="Search" aria-label="Search" />
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </form>
+</div>
+
+<div>
+  <div class="appsData-div">
+
+      <% appsDataArray.forEach(function(app) { %>
+
+          <div class="app-card">
+              <div class="card-heading-div">
+                  <h1><%= app.appname %></h1>
+                  <p><i class="far fa-clock"></i><%= app.date %></p>
+              </div>
+              <div class="card-info-div">
+                  <p>Username : <span><%= app.username %></span></p>
+                  <p>Email : <span><%= app.email %></span></p>
+                  <p>Url : <span><%= app.url %></span></p>
+                  <label for="password">Password :</label>
+                  <input id="password" type="text"value=<%= app.password %> />
+                  <button onclick="myFunction()">Copy</button>
+              </div>
+          </div>
+
+      <% }) %>
+
+      
+  </div>
+</div>
+
+<%- include('footer'); -%>
